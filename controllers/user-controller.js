@@ -15,6 +15,7 @@ const getOneUser = async (req, res) => {
         const oneUser = await User.findById(
             req.params.userId,
         )
+        res.json(oneUser)
     } catch (error) {
         res.status(500).json({ error });
     }
